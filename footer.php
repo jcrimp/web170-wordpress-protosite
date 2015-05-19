@@ -29,7 +29,7 @@
     		<li><a href="contact.php">info@sevenstarwomenskungfu.org</a></li>
     	</ul>
     </nav>
-    <p id="copyright"><small><a href="javascript:;">Site Map</a>  |  Content &copy; 2015 Seven Star Women's Kung Fu  |  Design &amp; logo &copy; 2015 <a href="http://madebyjennycrimp.com" target="_blank">Jenny Crimp</a></small></p>
+    <p id="copyright"><small><a href="javascript:;">Site Map</a>  |  Content &copy; 2015 Seven Star Women's Kung Fu  |  Design &amp; logo &copy; 2015 <a href="http://madebyjennycrimp.com" target="_blank">Jenny Crimp</a>  |  <?php wp_loginout(); ?></small></p>
     
     
     
