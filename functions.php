@@ -17,4 +17,7 @@ register_nav_menus( array(
 ));
 //end Register my menus
 
+//Enable featured images and post thumbnails
+add_theme_support('post-thumbnails');
+
 ?>
