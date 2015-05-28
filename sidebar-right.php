@@ -37,5 +37,10 @@
                   </ul>
                   <?php endif; ?>
               </nav>
+              <!-- end sub-navigation --?
               
+              <!-- begin pull quote -->
+			  <?php if(get_post_meta($post->ID, 'Quote', true)) : //check and see if there's a Quote?>
+              <blockquote><?php echo get_post_meta($post->ID, 'Quote', true); //echo the value of Quote ?></blockquote>
+              <?php endif; ?>
         </aside><!-- end #primary sidebar-->

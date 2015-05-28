@@ -25,5 +25,6 @@
                     <dd>10AM at Seven Star</dd>
                 </dl>                
                 <p><a href="javascript:;"><strong>View our Calendar</strong></a></p>
+                <?php dynamic_sidebar(); ?>
 			</section>
         </aside>

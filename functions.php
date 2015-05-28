@@ -17,6 +17,17 @@ register_nav_menus( array(
 ));
 //end Register my menus
 
+
+//Register sidebar
+register_sidebar( array(
+	'name' => __('donatesidebar'), 
+	'before_title' => '<h4>', 
+	'after_title' => '</h4>', 
+	'before_widget' => '<section class="widget">',
+	'after_widget' => '</section>'
+));
+//end register sidebar
+
 //Enable featured images and post thumbnails
 add_theme_support('post-thumbnails');
 
