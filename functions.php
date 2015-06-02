@@ -31,4 +31,35 @@ register_sidebar( array(
 //Enable featured images and post thumbnails
 add_theme_support('post-thumbnails');
 
+//Enable excerpts on Pages
+add_post_type_support('page', 'excerpt');
+
+//Get my badass SEO title tag
+function get_my_title_tag() {
+	
+	global $post;
+	
+	if (is_front_page()) {//the front page
+		bloginfo('description');
+	}
+	
+	elseif(is_page() || is_single()) {//pages and postings
+		the_title();//the title of the destination page or posting
+	}
+	
+	else{
+		bloginfo('description');
+	}
+	
+	if($post->post_parent) {
+		echo ' | ';
+		echo get_the_title($post->post_parent);
+	}
+	 
+	 echo ' | ';
+	 bloginfo('name'); //site (business) name
+	 echo ' | ';
+	 echo 'Seattle, WA';//write out the city and state
+}
+
 ?>
