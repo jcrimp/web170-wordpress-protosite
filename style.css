@@ -697,7 +697,9 @@ a:focus{
 #nav-sub a:hover, 
 #nav-sub a:focus,  
 #nav-sub ul li.current_page_item a, 
-.page-parent #nav-sub ul li h3 a{
+.page-parent #nav-sub ul li h3 a, 
+#nav-sub ul li.current-cat a, 
+.blog #nav-sub ul li h3 a{
 	text-decoration: none;
 	background-color: #DBA900; /* dark gold */
 	color: #ffffff;

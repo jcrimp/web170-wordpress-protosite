@@ -30,9 +30,9 @@
 				  </ul>
                   <?php endif; ?>
                   
-				  <?php if(!is_page()) : ?>
-                  <h3>Blog</h3>
+				  <?php if(!is_page()) : //If it is the blog feed or post?>
                   <ul>
+                  	<li><h3><a href="<?php echo get_permalink(get_page_by_title('Blog')); ?>">Blog</a></h3></li>
                   	<?php wp_list_categories( array(
 						'title_li' => '',
 					)); ?>
