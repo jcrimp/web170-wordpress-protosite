@@ -552,7 +552,7 @@ img.alignright{
 
 #content img.attachment-thumbnail{
 	float: left;
-	margin: 15px 20px 0 0;
+	margin: 4px 20px 0 0;
 }
 
 #content img.attachment-medium{
@@ -571,8 +571,9 @@ img.alignright{
 	overflow: hidden;
 }
 
-#content article.post-excerpt h2{
+#content article.post-excerpt h3{
 	margin-top: 0;
+	margin-bottom: 4px;
 }
 
 /* LINK STYLES */
@@ -695,7 +696,8 @@ a:focus{
 
 #nav-sub a:hover, 
 #nav-sub a:focus,  
-#nav-sub ul li.current_page_item a{
+#nav-sub ul li.current_page_item a, 
+.page-parent #nav-sub ul li h3 a{
 	text-decoration: none;
 	background-color: #DBA900; /* dark gold */
 	color: #ffffff;
@@ -1226,7 +1228,7 @@ p.button input{
 		color: #DBA900; /* dark gold */
 	}
 	#nav-mobile ul {
-		display: none;
+		/*display: none; TEMPORARY FIX UNTIL MOBILE NAV IS FIXED*/
 		list-style: none;
 		margin: 0;
 		padding: 0;

@@ -2,13 +2,15 @@
 	<aside id="primary">
               <nav id="nav-sub">
               <?php if(is_page()) : ?>
-              <h3><?php echo get_the_title($post->post_parent); //get the gateway page title?></h3>
+              
                   <ul>
+                  		
                     	<!-- <li><h3><a href="javascript:;" class="about-link">About Us</a></h3></li>
                       	<li><a href="javascript:;" class="training-link">Training With Us</a></li>
                       	<li><a href="javascript:;" class="instructors-link">Instructors</a></li>
                       	<li><a href="javascript:;" class="history-link">History &amp; Lineage</a>
                         </li> -->
+                        <li><h3><a href="<?php echo get_permalink($post->post_parent); ?>"><?php echo get_the_title($post->post_parent); //get the gateway page title?></a></h3></li>
                         <?php 
 						if($post->post_parent) 
 						{//if it's a child of a parent, list the child's title
