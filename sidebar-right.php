@@ -10,6 +10,17 @@
                       	<li><a href="javascript:;" class="instructors-link">Instructors</a></li>
                       	<li><a href="javascript:;" class="history-link">History &amp; Lineage</a>
                         </li> -->
+                        <?php
+						/*$children = get_pages('child_of='.$post->ID);
+						if( count ($children ) = 0 )
+						{
+							echo '<li><h3>' . get_the_title($post->post_parent) . '</li></h3>';
+						}
+						else
+						{
+							echo '<li><h3><a href="' . get_permalink($post->post_parent) . '">' . get_the_title($post->post_parent) . '</a></h3></li>';
+						}*/
+						?>
                         <li><h3><a href="<?php echo get_permalink($post->post_parent); ?>"><?php echo get_the_title($post->post_parent); //get the gateway page title?></a></h3></li>
                         <?php 
 						if($post->post_parent) 

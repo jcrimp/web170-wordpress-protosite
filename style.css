@@ -546,6 +546,10 @@ img.alignright{
 	clear: both;
 }
 
+#content img{
+	height: auto;
+}
+
 #content img.wp-post-image{
 	
 }
@@ -567,6 +571,7 @@ img.alignright{
 	
 }
 
+
 #content article.post-excerpt{
 	overflow: hidden;
 }
@@ -574,6 +579,10 @@ img.alignright{
 #content article.post-excerpt h3{
 	margin-top: 0;
 	margin-bottom: 4px;
+}
+
+#content article.post-excerpt small{
+	display: block;
 }
 
 /* LINK STYLES */
