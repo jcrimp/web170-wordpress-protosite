@@ -17,11 +17,24 @@
 <meta name="viewport" content="initial-scale=1">
 
 <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" />
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/flexslider.css" type="text/css" media="all" />
 <style type="text/css">
 <!--
    /* replace this line with embedded style rules */
 -->  
 </style>  
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/scripts/jquery.flexslider-min.js"></script>
+
+<script type="text/javascript">
+    $(window).load(function(){
+        $('.flexslider').flexslider({
+            animation: "fade",
+            slideshow: false,
+        });
+    })
+</script>
 
 <script> 
 <!--
@@ -37,6 +50,7 @@ function toggleNav() {
 }
 -->  
 </script>
+
 <!-- start WP head -->
 <?php wp_head(); ?>
 

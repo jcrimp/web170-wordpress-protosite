@@ -62,4 +62,28 @@ function get_my_title_tag() {
 	 echo 'Seattle, WA';//write out the city and state
 }
 
+//On a single posting (single.php), display attachment images as a flexslider gallery
+function add_flexslider() {
+     
+    global $post; // $post needs to be global within this function
+    
+    $attachments = get_children(array('post_parent' => $post->ID, 'order' => 'ASC', 'orderby' => 'menu_order', 'post_type' => 'attachment', 'post_mime_type' => 'image', ));
+    
+    if ($attachments) { //if there are images attached to posting, start flexslider markup
+        echo '<div class="flexslider">';
+        echo '<ul class="slides">';
+    
+        foreach ( $attachments as $attachment_id => $attachment ) { // create lis for images with captions
+            echo '<li>';
+            echo wp_get_attachment_image($attachment_id, 'large');
+            echo '<p>';
+            echo get_post_field('post_excerpt', $attachment->ID);
+            echo '</p>';
+            echo '</li>';  
+        }
+        echo '</ul>';
+        echo '</div>';   
+    } //end if   
+} //end add_flexslider()
+
 ?>
